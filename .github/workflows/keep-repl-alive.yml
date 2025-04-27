@@ -1,7 +1,11 @@
+# .github/workflows/keep-repl-alive.yml
+
 name: Keep Repl Alive
 
-# 이 워크플로우를 5분마다 실행합니다
+# 이 워크플로우를 수동으로도 실행할 수 있고,
+# 5분마다 크론 스케줄로 자동 실행합니다.
 on:
+  workflow_dispatch:    # ← 수동 실행용 버튼 활성화
   schedule:
     - cron: '*/5 * * * *'
 
